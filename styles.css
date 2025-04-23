@@ -149,4 +149,24 @@ nav ul a:hover{
         border: 1px solid black;
         font-size: 1rem;
     }
+
+    .intro{
+        flex-direction: column-reverse;
+    }
+
+    .info, .info p{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    h1{
+        text-align: center;
+    }
+
+    .graphs img{
+        width: 90%;
+    }
+
 }
