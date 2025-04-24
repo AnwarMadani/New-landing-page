@@ -42,7 +42,7 @@ a{
     color: inherit;
 }
 
-ul{
+header ul{
     list-style-type: none;
     list-style: none;
 }
@@ -107,16 +107,23 @@ nav ul a:hover{
     align-items: center;
 }
 
-.info{
+.info,
+.manage{
     width: 50%;
 }
 
-.info p{
+.info p,
+.manage p{
     width: 60%;
 }
 
-.info h1{
-    font-size: max(2rem, 3.5vw);
+.info h1,
+.manage h1{
+    font-size: max(2.1rem, 3.5vw);
+}
+
+.difference h2{
+    font-size: max(2.5vw, 1.5rem);
 }
 
 .graphs{
@@ -127,6 +134,47 @@ nav ul a:hover{
     width: 100%;
     height: auto;
 }
+
+.difference{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.difference ul{
+    width: 50%;
+    list-style: none;
+    counter-reset: cont;
+}
+
+.difference li{
+    counter-increment: cont;
+    display: grid;
+    margin-bottom: 30px;
+    gap: 20px 20px;
+    align-items: center;
+}
+
+.difference li p{
+    grid-column-start: 2;
+    margin: 0;
+}
+
+.difference ul li::before {
+    content: "0"counter(cont);
+    background: hsl(12, 88%, 65%);
+    width: 72px;
+    padding: 5px 20px;
+    border-radius: 40px;
+    display: inline-block;
+    line-height: 2rem;
+    color: white;
+    text-align: center;
+    font-weight: 800;
+    font-size: 14px;
+}
+
+
 
 
 @media screen and (max-width: 768px) {
@@ -154,19 +202,57 @@ nav ul a:hover{
         flex-direction: column-reverse;
     }
 
-    .info, .info p{
+    .info, .info p,
+    .manage, .manage p{
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 100%;
     }
 
-    h1{
+
+    h1,
+    h2,
+    h3{
         text-align: center;
     }
 
     .graphs img{
         width: 90%;
     }
+
+    .difference{
+        flex-direction: column;
+    }
+
+    .difference h3{
+        display: flex;
+        text-align: start;
+        background-color: hsl(13, 100%, 96%);
+        padding-left: 35px;
+        height: 100%;
+        width: 100%;
+        align-items: center;
+        translate: -20px 0;
+        z-index: -99;
+    }
+
+    .difference ul{
+        width: 100%;
+    }
+    
+    .difference li{
+        grid-template-columns: 70px auto;
+        gap: 20px 0;
+    }
+
+    
+    .difference ul p{
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+
+
 
 }
