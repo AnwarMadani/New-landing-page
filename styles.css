@@ -271,6 +271,55 @@ nav ul a:hover{
     background-color: rgb(221, 221, 221);
 }
 
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: hsl(233, 12%, 13%);
+    color: white;
+    padding: min(10%, 50px) calc((25% - 100px) / 2);
+    min-height: 28.5vh;
+}
+
+.social{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 5px;
+}
+
+footer ul{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 17px max(calc(20vw - 80px), 100px);
+    list-style: none;
+}
+
+footer .right{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: end;
+    font-size: 1rem;
+}
+
+footer form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer input{
+    margin-left: 20px;
+    margin-right: 10px;
+    font-weight: normal;
+    border: none;
+    padding: 13px 20px;
+    border-radius: 40px;
+    white-space: nowrap;
+}
+
+
 @keyframes scroll {
     0%{
         transform: translate(0px);
@@ -375,6 +424,14 @@ nav ul a:hover{
         background-image: url(/images/bg-simplify-section-mobile.svg);
         background-position: left;
     }
+
+    footer{
+        flex-flow: column-reverse;
+        gap: 1.5rem;
+        padding: 2rem;
+    }
+
+    
 
 
 }
