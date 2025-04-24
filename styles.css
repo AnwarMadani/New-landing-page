@@ -13,11 +13,17 @@ body{
     font-family: 'Be Vietnam Pro', sans-serif;
     font-size: 16px;
     max-width: 100vw;
-    /* background-image: url(/images/bg-tablet-pattern.svg);
+    background-image: url("./images/bg-tablet-pattern.svg");
     background-repeat: no-repeat;
     background-position: top -110px right -160px;
     background-size: max(90vmin, 450px);
-    overflow-x: hidden; */
+    overflow-x: hidden;
+}
+
+main{
+    background-image: url("./images/bg-tablet-pattern.svg");
+    background-repeat: no-repeat;
+    background-position: -500px 1120px;
 }
 
 header{
@@ -286,6 +292,7 @@ footer{
     display: flex;
     justify-content: space-evenly;
     gap: 5px;
+    margin-top: 1rem;
 }
 
 footer ul{
@@ -317,6 +324,10 @@ footer input{
     padding: 13px 20px;
     border-radius: 40px;
     white-space: nowrap;
+}
+
+.center a:hover{
+    color: hsl(12, 88%, 59%);
 }
 
 
@@ -432,6 +443,4 @@ footer input{
     }
 
     
-
-
 }
